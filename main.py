@@ -13,6 +13,10 @@ def read_image_file(file) -> Image.Image:
     image = Image.open(BytesIO(file))
     return image
 
+@app.get('/index')
+async def image_upload_test():
+    return "ready for image upload"
+
 
 @app.post("/predict/image")
 async def index():
