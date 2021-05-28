@@ -18,7 +18,7 @@ async def image_upload_test():
     return "ready for image upload"
 
 
-@app.post("/predict/image")
+@app.get("/predict/image")
 async def index():
     return RedirectResponse(url="/docs")
 
