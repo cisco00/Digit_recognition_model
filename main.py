@@ -1,36 +1,45 @@
 import uvicorn
-from io import BytesIO
-from tkinter import Image
-from starlette.responses import RedirectResponse
-from fastapi import FastAPI, File, UploadFile
-from components import predict
 from PIL import Image
+from io import BytesIO
+from starlette.responses import HTMLResponse
+from fastapi import FastAPI, File, UploadFile
+from components import convert_image_to_array
+from tensorflow.keras.models import load_model
 
-app = FastAPI()
+
+app = FastAPI(title="Digit image recognition model")
 
 
 def read_image_file(file) -> Image.Image:
     image = Image.open(BytesIO(file))
     return image
 
-@app.get('/index')
-async def image_upload_test():
-    return "ready for image upload"
+
+@app.get("/ping")
+def ping():
+    return "pong"
 
 
-@app.get("/predict/image")
+@app.post("/create_upload_file/")
+async def digit_image(file: UploadFile = File(...)):
+    model = load_model("test_model.h5")
+    image_array = convert_image_to_array(file.file, 28, 28, 1)
+    predictions = int(model.predict_classes(image_array))
+    return predictions
+
+
+@app.get("/")
 async def index():
-    return RedirectResponse(url="/docs")
+    content = """
+<body>
+<form action="/create_upload_file/" enctype="multipart/form-data" method="post">
+<input name="file" type="file" multiple>
+<input type="submit">
+</form>
+</body>
+    """
 
-
-async def predict_api(file: UploadFile = File(...)):
-    extension = file.filename.split(",")[-1] in ("jpg", "jpeg", "png")
-    if not extension:
-        return "Image must be jpg, jpeg or png format"
-    image = read_image_file(await file.read())
-    prediction = predict(image)
-
-    return prediction
+    return HTMLResponse(content=content)
 
 
 if __name__ == "__main__":
