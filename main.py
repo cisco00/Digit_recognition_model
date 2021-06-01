@@ -9,6 +9,7 @@ from tensorflow.keras.models import load_model
 
 app = FastAPI(title="Digit image recognition model")
 
+model = load_model("test_model.h5")
 
 def read_image_file(file) -> Image.Image:
     image = Image.open(BytesIO(file))
@@ -22,7 +23,6 @@ def ping():
 
 @app.post("/create_upload_file/")
 async def digit_image(file: UploadFile = File(...)):
-    model = load_model("test_model.h5")
     image_array = convert_image_to_array(file.file, 28, 28, 1)
     predictions = int(model.predict_classes(image_array))
     return predictions
