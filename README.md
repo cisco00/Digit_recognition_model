@@ -1,14 +1,14 @@
 # Digit_recognition_model
-A tensorflow model that was build on fastAPI framework to predict a hand written digits or hand-written numbers. 
+A tensorflow model that was build on fastAPI framework to predict a hand written digits or hand-written numbers. For instance if you download an image with a particular digit or if the image is blurring and you want to confirm if it is handwritten or it is just a typed figure from a keyboard you can use the predictor to confirm.
 
-Imported Libraries for Building the Model
+IMPORTED LIBRARIES FOR BUILDING MODEL
 1. numpy
 2. tensorflow
 3. keras
 4. matplotlib
 5. imageio
 
-requirements for heroku deployment
+REQUIREMENT FOR HEROKU DEPLOYMENT
 1. fastai
 2. tensorflow-cpu==2.5.0
 3. uvicorn
