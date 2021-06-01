@@ -1,5 +1,8 @@
 # Digit_recognition_model
 A tensorflow model that was build on fastAPI framework to predict a hand written digits or hand-written numbers. For instance if you download an image with a particular digit or if the image is blurring and you want to confirm if it is handwritten or it is just a typed figure from a keyboard you can use the predictor to confirm.
+![test_sample](https://i.imgur.com/a3Rql9C.png)
+
+![frontend_view](https://drive.google.com/file/d/1hJA425Du15WXGib8A-g9VEjonsJwzR3g/view?usp=sharing)
 
 IMPORTED LIBRARIES FOR BUILDING MODEL
 1. numpy
