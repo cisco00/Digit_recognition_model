@@ -69,11 +69,11 @@ body {
 </div>
 <div style="padding-left:16px">
   <h2>Hand Written Digit Recognition app</h2>
-  <p>Insert your image here</p>
+  <p>Upload Handwritten image</p>
  <form action="/create_upload_file/" enctype="multipart/form-data" method="post">
 <input name="file" type="file" multiple>
 </br></br>
-<input type="submit">
+<input type="Generate Result">
 </form>
 </div>
 
