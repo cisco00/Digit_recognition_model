@@ -14,7 +14,7 @@ def client():
 
 
 def test_upload_image_data(client):
-    file_name = "fake-text-stream.png"
+    file_name = "image.png"
     data = {'image': (io.BytesIO(b"some initail text data"), file_name)
             }
     response = client.post('/upload', data=data)
