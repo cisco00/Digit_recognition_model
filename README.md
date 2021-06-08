@@ -46,9 +46,9 @@ For the application to work on cloud there is the need to specify the python ver
 The frontend of the app was build with HTMl and CSS
 
 #REFERENCE
-2. FastAPI Documentation. [link](https://fastapi.tiangolo.com/)
-3. Requests Documentation. [link](https://docs.python-requests.org/en/master/)
-4. Pytest Documentation. [link](https://docs.pytest.org/en/stable/contents.html)
+     1. FastAPI Documentation. [link](https://fastapi.tiangolo.com/)
+     2. Requests Documentation. [link](https://docs.python-requests.org/en/master/)
+     3. Pytest Documentation. [link](https://docs.pytest.org/en/stable/contents.html)
 
 interacte with the model using the link below
 url = https://digit-prediction1.herokuapp.com/
