@@ -6,14 +6,14 @@ Before going through the steps you need to have the following pre-installed
 
 #Tools
 1. python3.8.10
-2. you can install the requiremnet using 
-     a. Linux = pip install -r requirements\dev.linux.txt
-     b. windows = pip install -r requirements\dev.windows.txt
+2. fastAPI
+3. you can install the requiremnet using 
+     a. Linux = [pip install -r requirements\dev.linux.txt]
+     b. windows = [pip install -r requirements\dev.windows.txt]
    but if you wish to start the project new use the below to setup
-4. create a virtual environment using python -m venv env and activate the environment using 
-    a. Linux = source env/bin/activate
-    b. cd scripts/bin/sctivate
-4. fastAPI
+4. create a virtual environment using [python -m venv env] and activate the environment using 
+    a. Linux = [source env/bin/activate]
+    b. cd [scripts/bin/sctivate]
  
 #THE FASTAPI APPLICATION
 The model was build using fastAPI framework with two major files, [](main.py) and [](component.py)
@@ -35,12 +35,12 @@ In building the model I used the reference [Digit_recognition_model](https://git
 
 #PROCFILE
 In other for the fastAPI app to run on cloud environent there is the need to install gunicorn, while to run on local environment you need to install uvicorn without any of the above you will be having an error either locally or on the cloud environment.
-cloud env = web: gunicorn -w 3 -k uvicorn.workers.UvicornWorker main:app
-local-env = uvicorn
+cloud env = web: [gunicorn -w 3 -k uvicorn.workers.UvicornWorker main:app]
+local-env = [uvicorn]
 
 #RUNTIME
 For the application to work on cloud there is the need to specify the python version you use in building the fastAPI.
-python-3.8.10
+[python-3.8.10]
 
 #FRONTEND
 The frontend of the app was build with HTMl and CSS
