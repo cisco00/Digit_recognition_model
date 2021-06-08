@@ -54,7 +54,7 @@ The frontend of the app was build with HTMl and CSS
 interacte with the model using the link below
  url = https://digit-prediction1.herokuapp.com/
 
-[twitterhandle](https://twitter.com/ikwufrancis)
-[linkedin](https://www.linkedin.com/in/idoko-ikwu-633b6134/)
+twitter [handle](https://twitter.com/ikwufrancis)
+linkedin [handle](https://www.linkedin.com/in/idoko-ikwu-633b6134/)
 
 
