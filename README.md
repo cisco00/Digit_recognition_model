@@ -9,12 +9,12 @@ A tensorflow model that was build on fastAPI framework to predict a hand written
 1. python3.8.10
 2. fastAPI
 3. you can install the requiremnet using 
-     a. Linux = [pip install -r requirements\dev.linux.txt]
-     b. windows = [pip install -r requirements\dev.windows.txt]
-   but if you wish to start the project new use the below to setup
+                  a. Linux = [pip install -r requirements\dev.linux.txt]
+                  b. windows = [pip install -r requirements\dev.windows.txt]
+            but if you wish to start the project new use the below to setup
 4. create a virtual environment using [python -m venv env] and activate the environment using 
-    a. Linux = [source env/bin/activate]
-    b. cd [scripts/bin/sctivate]
+                a. Linux = [source env/bin/activate]
+                b. cd [scripts/bin/sctivate]
  
 # THE FASTAPI APPLICATION
 The model was build using fastAPI framework with two major files, [](main.py) and [](component.py)
