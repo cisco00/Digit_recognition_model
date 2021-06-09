@@ -73,7 +73,7 @@ body {
  <form action="/create_upload_file/" enctype="multipart/form-data" method="post">
 <input name="file" type="file" multiple>
 </br></br>
-<input type="Generate Result">
+<input type="summit">
 </form>
 </div>
 
