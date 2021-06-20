@@ -40,7 +40,7 @@ jobs:
         uses: docker/login-action@v1
         with:
             username: ${{secret.DOCKERHUB_USERNAME }}
-            password: ${{08106689260@Ab.DOCKERHUB_TOKEN }}
+            password: ${{secret.DOCKERHUB_PASSWORD }}
       -
         name: Build and push
         uses: docker/build-push-action@v1
